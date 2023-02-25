@@ -21,7 +21,7 @@ export default function App() {
         <div className="pages">
           <Routes>
             <Route
-              path='/'
+              path='https://daily-workout.onrender.com/'
               element={user ? <Home /> : <Navigate to="/login"/>}
             />
             
