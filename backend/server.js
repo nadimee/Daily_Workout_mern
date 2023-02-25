@@ -18,12 +18,14 @@ app.use(morgan('dev'))//app use morgan in logging requests
 app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give it the path /api/workouts
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
 
+const PORT = process.env.PORT || 5000;
+
 mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    // listen for requests on port 4000 and connect to mongoDB 
+    // listen for requests
     app.listen(process.env.PORT, () => {
-      console.log('connected to db & listening on port 5000')
+      console.log(`Server running on port ${PORT}`)
     })
   })
   .catch(err => console.log(err))
