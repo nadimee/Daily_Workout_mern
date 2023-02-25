@@ -30,7 +30,7 @@ mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     // listen for requests
-    app.listen(process.env.PORT, () => {
+    app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`)
     })
   })
