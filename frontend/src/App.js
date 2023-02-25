@@ -22,17 +22,17 @@ export default function App() {
           <Routes>
             <Route
               path='https://daily-workout.onrender.com/'
-              element={user ? <Home /> : <Navigate to="/login"/>}
+              element={user ? <Home /> : <Navigate to="https://daily-workout.onrender.com/login"/>}
             />
             
             <Route
-              path='/login'
-              element={!user ?  <Login /> : <Navigate to="/" />}
+              path='https://daily-workout.onrender.com/login'
+              element={!user ?  <Login /> : <Navigate to="https://daily-workout.onrender.com/" />}
             />
 
             <Route
-              path='/signup'
-              element={!user ? <Signup /> : <Navigate to="/" />}
+              path='https://daily-workout.onrender.com/signup'
+              element={!user ? <Signup /> : <Navigate to="https://daily-workout.onrender.com/" />}
             />
 
           </Routes>
