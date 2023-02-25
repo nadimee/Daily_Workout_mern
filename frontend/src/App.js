@@ -21,18 +21,18 @@ export default function App() {
         <div className="pages">
           <Routes>
             <Route
-              path='https://daily-workout.onrender.com/'
-              element={user ? <Home /> : <Navigate to="https://daily-workout.onrender.com/login"/>}
+              path='/'
+              element={user ? <Home /> : <Navigate to="/login"/>}
             />
             
             <Route
-              path='https://daily-workout.onrender.com/login'
-              element={!user ?  <Login /> : <Navigate to="https://daily-workout.onrender.com/" />}
+              path='/login'
+              element={!user ?  <Login /> : <Navigate to="/" />}
             />
 
             <Route
-              path='https://daily-workout.onrender.com/signup'
-              element={!user ? <Signup /> : <Navigate to="https://daily-workout.onrender.com/" />}
+              path='/signup'
+              element={!user ? <Signup /> : <Navigate to="/" />}
             />
 
           </Routes>
