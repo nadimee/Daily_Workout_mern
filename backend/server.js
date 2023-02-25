@@ -18,11 +18,6 @@ app.use(morgan('dev'))//app use morgan in logging requests
 app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give it the path /api/workouts
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
 
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 
 const PORT = process.env.PORT || 5000;
 
