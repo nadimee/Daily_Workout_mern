@@ -16,19 +16,19 @@ const router = express.Router();//will use express Router for user post,retrieve
 router.use(requireAuth)
 
 // get all workouts
-router.get('https://daily-workout.onrender.com/', getWorkouts)
+router.get('/', getWorkouts)
 
 // get single workout
-router.get('https://daily-workout.onrender.com/:id', getWorkout)
+router.get('/:id', getWorkout)
 
 // post a new workout
-router.post('https://daily-workout.onrender.com/', createWorkout)
+router.post('/', createWorkout)
 
 // delete a new workout
-router.delete('https://daily-workout.onrender.com/:id', deleteWorkout)
+router.delete('/:id', deleteWorkout)
 
 
 // update a new workout
-router.patch('https://daily-workout.onrender.com/:id', updateWorkout)
+router.patch('/:id', updateWorkout)
 
 module.exports = router
