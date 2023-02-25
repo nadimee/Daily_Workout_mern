@@ -6,10 +6,10 @@ const { singupUser, loginUser } = require('../controllers/userController') //sin
 const router = express.Router() //will use express Router for user posting when logging or signup
 
 
-router.post('https://daily-workout.onrender.com/login', loginUser)// login route with path /login and the controller function
+router.post('/login', loginUser)// login route with path /login and the controller function
 
 
-router.post('https://daily-workout.onrender.com/signup', singupUser)// signup route with path /signup and the controller function
+router.post('/signup', singupUser)// signup route with path /signup and the controller function
 
 
 module.exports = router
