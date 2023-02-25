@@ -26,7 +26,6 @@ app.get('/*', function(req, res) {
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     // listen for requests
