@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'frontend')));
 
 // Route handler for the home page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname+'/frontend','public','index.html'));
+  res.sendFile(path.join(__dirname,'frontend','index.html'));
 });
 
 
