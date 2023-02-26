@@ -10,7 +10,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd backend && npm install && npm start,
+    "build": "cd backend && npm install && npm start",
     "start": "cd frontend && npm install && npm run build && npm start""
   },
   "author": "nadime",
