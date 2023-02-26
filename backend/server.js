@@ -6,6 +6,7 @@ const mongoose = require('mongoose')/*map the model attributes and requirements 
                                       and documents in our database, and make queries to retrieve info from the database*/
 const workoutRoutes = require('./routes/workoutsRoutes')//route that app will use
 const userRoutes = require('./routes/userRoutes')//route that app will use
+const path = require('path');
 
 // express app
 const app = express();//app will get the request from a specefic url and response to specific url
@@ -17,6 +18,17 @@ app.use(morgan('dev'))//app use morgan in logging requests
 // routes
 app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give it the path /api/workouts
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
+
+
+
+
+// Serve static files from the client directory
+app.use(express.static(path.join(__dirname, 'frontend')));
+
+// Route handler for the home page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname+'/frontend','public','index.html'));
+});
 
 
 const PORT = process.env.PORT || 5000;
