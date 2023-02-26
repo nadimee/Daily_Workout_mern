@@ -20,7 +20,7 @@ app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give i
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
 
 
-app.use(express.static('daily_workout_mern/frontend/public'));
+app.use(express.static(__dirname+'/frontend/public'));
 
 // Handle GET requests for the root path
 app.get('/', (req, res) => {
