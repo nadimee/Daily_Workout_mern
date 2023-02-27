@@ -1,4 +1,4 @@
-{ "proxy": "https://daily-workout-server.onrender.com:5000",
+{ "proxy": "https://daily-workout-server.onrender.com:4000",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
