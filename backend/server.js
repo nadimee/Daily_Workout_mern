@@ -13,6 +13,7 @@ const app = express();//app will get the request from a specefic url and respons
 
 // middlewares
 app.use(express.json())//our app will use json format in communication
+app.use(express.static('../frontend'))//serve static files 
 app.use(morgan('dev'))//app use morgan in logging requests
 
 // routes
