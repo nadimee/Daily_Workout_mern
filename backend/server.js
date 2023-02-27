@@ -15,13 +15,13 @@ const app = express();//app will get the request from a specefic url and respons
 // middlewares
 app.use(express.json())//our app will use json format in communication
 app.use(morgan('dev'))//app use morgan in logging requests
-
+mongoose.set('strictQuery', false);
 // routes
 app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give it the path /api/workouts
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
 
 app.get('/', (req, res) => {
-  res.sendFile('../frontend/build/index.html');
+  res.sendFile(__dirname+'/frontend/build/index.html');
 });
 
 
