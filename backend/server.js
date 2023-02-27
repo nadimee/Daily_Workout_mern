@@ -20,6 +20,7 @@ app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give i
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
 
 app.get('/',(req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials","true")
   res.sendFile(__dirname+'/../frontend/build/index.html')
 })
 
