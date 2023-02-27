@@ -7,7 +7,7 @@ const mongoose = require('mongoose')/*map the model attributes and requirements 
 const workoutRoutes = require('./routes/workoutsRoutes')//route that app will use
 const userRoutes = require('./routes/userRoutes')//route that app will use
 
-
+mongoose.set('strictQuery', true);
 // express app
 const app = express();//app will get the request from a specefic url and response to specific url
 app.use(express.static('../frontend'))//serve static files 
