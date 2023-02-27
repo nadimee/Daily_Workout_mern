@@ -18,9 +18,8 @@ app.use(morgan('dev'))//app use morgan in logging requests
 // routes
 app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give it the path /api/workouts
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
-app.use('/',indexHtml)
 
-// Handle GET requests for the root path
+
 app.get('/', (req, res) => {
   res.sendFile(indexHtml);
 });
