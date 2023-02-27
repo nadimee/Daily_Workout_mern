@@ -20,7 +20,7 @@ app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give i
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
 
 app.get('/',(req, res) => {
-  res.sendFile(__dirname+'../frontend/build/index.html')
+  res.sendFile('../frontend/build/index.html')
 })
 
 
