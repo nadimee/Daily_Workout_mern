@@ -15,7 +15,7 @@ app.use(express.static(__dirname+'/../frontend'))//serve static files
 // middlewares
 app.use(express.json())//our app will use json format in communication
 app.use(morgan('dev'))//app use morgan in logging requests
-mongoose.set('strictQuery', false);
+
 // routes
 app.use('/api/workouts',workoutRoutes)//express app use workoutRoutes and give it the path /api/workouts
 app.use('/api/user',userRoutes)//express app use userRoutes and give it the path /api/user
@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
