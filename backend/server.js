@@ -10,7 +10,7 @@ const path = require('path')
 const indexHtml = path.join(__dirname,"../frontend/build/index.html")
 // express app
 const app = express();//app will get the request from a specefic url and response to specific url
-//app.use(express.static('../frontend'))//serve static files 
+app.use(express.static(path.join(__dirname,"../frontend")))//serve static files 
 
 // middlewares
 app.use(express.json())//our app will use json format in communication
