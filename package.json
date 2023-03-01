@@ -1,10 +1,4 @@
 {
-  "dependencies": {
-    "bcrypt": "^5.1.0",
-    "date-fns": "^2.29.3",
-    "jsonwebtoken": "^9.0.0",
-    "validator": "^13.9.0"
-  },
   "name": "mern_daily_workout_app",
   "version": "1.0.0",
   "main": "index.js",
