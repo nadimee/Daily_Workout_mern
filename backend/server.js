@@ -7,7 +7,7 @@ const mongoose = require('mongoose')/*map the model attributes and requirements 
 const workoutRoutes = require('./routes/workoutsRoutes')//route that app will use
 const userRoutes = require('./routes/userRoutes')//route that app will use
 const path = require('path')
-const indexHtml = path.join(__dirname,"../frontend/public/index.html")
+const indexHtml = path.join(__dirname,"../frontend/build/index.html")
 // express app
 const app = express();//app will get the request from a specefic url and response to specific url
 app.use(express.static(path.join(__dirname,"../frontend")))//serve static files 
